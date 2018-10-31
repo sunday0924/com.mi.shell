@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="调用app内布局" />
+    <PreferenceScreen
+        android:title="demo 1"
+        android:key=""
+        android:summary="demo 1">
+        <intent
+            android:targetPackage="com.mi.shell"
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.mi.shell.demo_1" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:title="demo 2"
+        android:key=""
+        android:summary="demo 2">
+        <intent
+            android:targetPackage="com.mi.shell"
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.mi.shell.demo_2" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:title="demo 3"
+        android:key=""
+        android:summary="demo 3">
+        <intent
+            android:targetPackage="com.mi.shell"
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.mi.shell.demo_3" />
+    </PreferenceScreen>
+    <PreferenceCategory android:title="intent调用" />
+    <PreferenceScreen
+        android:title="电池优化"
+        android:key=""
+        android:summary="调用原生设置">
+        <intent
+            android:targetPackage="com.android.settings"
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.android.settings.Settings$HighPowerApplicationsActivity" />
+    </PreferenceScreen>
+    <PreferenceCategory android:title="java代码实现命令" />
+    <PreferenceScreen
+        android:title="常规演示"
+        android:key="rest"
+        android:summary="匹配key值以执行对应操作" />
+    <PreferenceCategory android:title="shell 执行" />
+    <PreferenceScreen
+        android:title="脚本演示"
+        android:key="sh /system/bin/test.sh"
+        android:summary="读取key值为sh文件并执行" />
+    <PreferenceCategory android:title="各类布局" />
+    <EditTextPreference
+        android:title="编辑框"
+        android:key=""
+        android:summary="弹出一个demo" />
+    <CheckBoxPreference
+        android:title="复选框"
+        android:key=""
+        android:summaryOff="未选中"
+        android:summaryOn="选中" />
+    <PreferenceCategory android:title="代码"/>
+    <PreferenceScreen
+        android:title="开源代码"
+        android:key=""
+        android:summary="仅限学习交流使用">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://github.com/sunday-miui/shell" />
+    </PreferenceScreen>
+    <PreferenceCategory android:title="模板使用方法:\n1. apk内res/xml/main.xml为页面主布局文件，用户可做对应修改完成自定义界面。注意:每组布局必须包含key值，留空也行;\n2. 其余demo_1.xml等布局分别对应主界面的demo_1等布局页面;\n3. 假如需要在xml内直接定义sh执行，那么你的key值应该以sh /开头;\n4. 其他用法请参考本开源项目源码或自行百度
+"/>
+</PreferenceScreen>
